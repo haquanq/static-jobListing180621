@@ -39,10 +39,10 @@ const Section = (props, key) => {
     <div key={key.key} className="sec">
       <div
         style={props.featured ? { display: "block" } : { display: "none" }}
-        className="feature"
+        className="feated"
       ></div>
       <div className="sec__left">
-        <img src={props.logo} alt="" />
+        <img src={props.logo} alt="logo" />
         <div className="sec__left__content">
           <div>
             <h4>{props.company}</h4>
