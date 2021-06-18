@@ -29,7 +29,7 @@ const Main = () => {
         <img src={"./images/bg-header-desktop.svg"} alt="" />
       </header>
       <main>
-        <section
+        <div
           style={!inUse ? { display: "none" } : { display: "flex" }}
           className="filter_container"
         >
@@ -48,7 +48,7 @@ const Main = () => {
             Clear
             <span></span>
           </button>
-        </section>
+        </div>
         <div>
           <Jobs tag={tags} get={getTags} />
         </div>
