@@ -36,10 +36,10 @@ const Jobs = (props) => {
 
 const Section = (props, key) => {
   return (
-    <section key={key.key} className="sec">
+    <div key={key.key} className="sec">
       <div
         style={props.featured ? { display: "block" } : { display: "none" }}
-        id="feature"
+        className="feature"
       ></div>
       <div className="sec__left">
         <img src={props.logo} alt="" />
@@ -79,7 +79,7 @@ const Section = (props, key) => {
           </button>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 export default Jobs;
