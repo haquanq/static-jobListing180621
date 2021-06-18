@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+:root {
+  --Desaturated_Dark_Cyan: hsl(180, 29%, 50%);
+  --Light_Grayish_Cyan_1: hsl(180, 52%, 96%);
+  --Light_Grayish_Cyan_2: hsl(180, 31%, 95%);
+  --Dark_Grayish_Cyan: hsl(180, 8%, 52%);
+  --Very_Dark_Grayish_Cyan: hsl(180, 14%, 20%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.sec {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 26px;
+  padding: 30px 35px;
+  width: 100%;
+  min-height: 150px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#feature {
+  border-radius: 5px 0 0 5px;
+  background: var(--Desaturated_Dark_Cyan);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  position: absolute;
+}
+
+.sec__left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sec__left img {
+  border: none;
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  background: white;
+}
+
+.sec__left__content {
+  width: 350px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+
+.sec__left__content > h2 {
+  margin-top: 2px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--Very_Dark_Grayish_Cyan);
+  transition: 200ms ease;
+}
+
+.sec__left__content > div:first-child {
+  display: flex;
+  align-items: baseline;
+}
+
+.sec__left__content > div:first-child h4 {
+  font-weight: 700;
+  color: var(--Desaturated_Dark_Cyan);
+  font-size: 1em;
+}
+
+.sec__left__content > div:first-child p {
+  text-transform: uppercase;
+  border-radius: 50px;
+  color: var(--Light_Grayish_Cyan_2);
+  font-weight: 700;
+  padding: 4px 8px 0 8px;
+  font-size: 0.733em;
+  letter-spacing: 0.5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.new {
+  margin-left: 20px;
+  background: var(--Desaturated_Dark_Cyan);
+}
+
+.feature {
+  background: var(--Very_Dark_Grayish_Cyan);
+  margin-left: 9px;
+}
+
+.sec__left__content > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.sec__left__content > div:last-child p {
+  font-weight: 500;
+  font-size: 0.9333em;
+  color: var(--Dark_Grayish_Cyan);
+}
+
+.sec__left__content > div:last-child span {
+  display: block;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.296);
+  margin: 0 18px 3px 18px;
+}
+
+.sec__right {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.sec__right button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: var(--Light_Grayish_Cyan_1);
+  color: var(--Desaturated_Dark_Cyan);
+  font-weight: 700;
+  font-size: 0.866em;
+  padding: 3px 10px 0 10px;
+  margin: 8px 0 8px 9px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  transition: 200ms ease;
+}
+
+@media (hover: hover) {
+  .sec__left__content > h2:hover {
+    color: var(--Desaturated_Dark_Cyan);
+  }
+  .sec__right button:hover {
+    background: var(--Desaturated_Dark_Cyan);
+    color: var(--Light_Grayish_Cyan_2);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sec {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sec__left {
+    padding-bottom: 20px;
+  }
+  .sec__right {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sec__right button {
+    margin: 16px 16px 0 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sec {
+    margin-top: 40px;
+    padding: 30px 25px 20px 25px;
+  }
+  .sec__left {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 15px;
+  }
+
+  .sec__right {
+    padding: 10px 0;
+  }
+
+  .sec__left img {
+    top: -55px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+
+  .sec__left__content {
+    height: 95px;
+    width: max-content;
+    margin: 0;
+  }
+
+  .sec__left__content > div:first-child h4 {
+    font-size: 1em;
+  }
+
+  .sec__left__content > div:last-child span {
+    margin: 0 8px 3px 8px;
+  }
+}
