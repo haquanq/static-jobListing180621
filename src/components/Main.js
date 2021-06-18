@@ -49,7 +49,7 @@ const Main = () => {
             <span></span>
           </button>
         </div>
-        <div>
+        <div className="joblist">
           <Jobs tag={tags} get={getTags} />
         </div>
       </main>
