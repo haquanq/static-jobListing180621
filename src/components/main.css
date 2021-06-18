@@ -157,7 +157,7 @@ main > .joblist {
 }
 
 @media screen and (max-width: 900px) {
-  main > div {
+  main > .joblist {
     margin: 15px 0 120px 0;
   }
   .filter_container {
