@@ -1,6 +1,7 @@
 import Jobs from "./Jobs";
 import "./main.css";
 import React, { useState } from "react";
+import Tags from "./Tags";
 
 const Main = () => {
   const [inUse, setUse] = useState(false);
@@ -29,26 +30,12 @@ const Main = () => {
         <img src={"./images/bg-header-desktop.svg"} alt="" />
       </header>
       <main>
-        <div
-          style={!inUse ? { display: "none" } : { display: "flex" }}
-          className="filter_container"
-        >
-          <div className="filter_tags">
-            {tags.map((value, index) => (
-              <div key={index} className="tag_container">
-                <p className="tag_value">{value}</p>
-                <div value={value} onClick={delTags} className="close_btn">
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <button onClick={clearTags}>
-            Clear
-            <span></span>
-          </button>
-        </div>
+        <Tags
+          inUse={inUse}
+          tags={tags}
+          delTags={delTags}
+          clearTags={clearTags}
+        />
         <div className="joblist">
           <Jobs tag={tags} get={getTags} />
         </div>
